@@ -1,0 +1,90 @@
+<div id="mdlAddProject" class="modal fade" aria-labelledby="lblAddProjectTitle" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <input type="button" class="close" data-dismiss="modal" aria-hidden="true"/ value="&times;">
+                <h4 id="lblAddProjectTitle" class="modal-title">Upload Project</h4>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <form id="frmAddProject" action="../../AddProject" class="form-horizontal" >
+                    <fieldset>
+                        
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                <label class="control-label" for="txtAddProjectName">Project Name</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <input name="txtAddProjectName" id="txtAddProjectName" type="text" class="form-control" placeholder="Project Name"/>
+                            </div>
+                        </div>
+                        
+                         
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                <label class="control-label" for="fileAddProjectFile">Upload File</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <input name="fileAddProjectFile" id="fileAddProjectFile" type="file" class="form-control" placeholder="Vector File"/>
+                                <p class="help-block">*.php , *.zip</p>
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <div class="col-sm-2">
+                                <label class="control-label" for="txtAddProjectDesc">Project Description</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <input name="txtAddProjectDesc" id="txtAddProjectDesc" type="text" class="form-control" placeholder="Project Description"/>
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <div class="col-sm-2">
+                                <label class="control-label" for="chkAddProjectShouldSqli">Attack Analysis</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <label>
+                                    <input name="chkAddProjectShouldSqli" type="checkbox" checked/>Conduct SQL Injection (SQLI) Analysis 
+                                </label>
+                                <input name="txtAddProjectAtkPatternSqli" id="txtAddProjectAtkPatternSqli" type="text" class="form-control" placeholder="SQLI Attack Pattern Regex" value="/.*' OR '1'='1.*/"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                
+                            </div>
+                            <div class="col-sm-10">
+                                 <label class="control-label" for="chkAddProjectShouldXss">
+                                    
+                                    <input name="chkAddProjectShouldXss" type="checkbox" checked/>Conduct Cross Site Scripting (XSS) Analysis
+                                </label>
+                                <input name="txtAddProjectAtkPatternXss" id="txtAddProjectAtkPatternXss" type="text" class="form-control" placeholder="XSS Pattern Regex" value="/.*\<SCRIPT.*/"/>
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <div class="col-sm-2">
+                                
+                            </div>
+                            <div class="col-sm-10">
+                                <label>
+                                    <input name="chkAddProjectShouldMfe" type="checkbox" checked/>Conduct Malicious File (MFE) Execution Analysis
+                                </label>
+                                <input name="txtAddProjectAtkPatternMfe" id="txtAddProjectAtkPatternMfe" type="text" class="form-control" placeholder="MFE Attack Pattern Regex" value="/.*/evil.*/"/>
+                            </div>
+                            
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-10 col-sm-offset-2">
+                                <input type="button" value="Submit" class="btn btn btn-primary" id="btnSubmitAddProject" />
+                                <input type="button" value="Cancel" class="btn" id="btnCancelAddProject"/>  
+                            </div>
+                            
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="modal-footer">
+                
+            </div>
+        </div>
+
+    </div>
+</div>

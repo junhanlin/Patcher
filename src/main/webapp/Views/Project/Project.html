@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+<script src="../../Scripts/jquery/jquery.js"></script>
+<link rel="stylesheet" href="../../Styles/nsProgress/nsProgress.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="../../Styles/bootstrap/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet"
+	href="../../Styles/bootstrap/bootstrap-theme.min.css">
+<link rel="stylesheet"
+	href="../../Styles/bootstrap/ladda-themeless.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<!--[if lt IE 9]>
+        <script src="//cdnjs.bootcss.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+        <![endif]-->
+<script src="../../Scripts/bootstrap/bootstrap.min.js"></script>
+<script src="../../Scripts/bootstrap/spin.min.js"></script>
+<script src="../../Scripts/bootstrap/ladda.min.js"></script>
+<link href="../../Styles/Shared/Alert.css" rel="stylesheet">
+
+<link href="../../Styles/Project/Project.css" rel="stylesheet">
+
+<script type="text/javascript" src="../../Scripts/nsProgress/nsProgress.js"></script>
+<script type="text/javascript" src="../../Scripts/Shared/Utility.js"></script>
+<script type="text/javascript" src="../../Scripts/Shared/Alert.js"></script>
+<script type="text/javascript" src="../../Scripts/User/NavBar_Login.js"></script>
+<script type="text/javascript" src="../../Scripts/User/NavBar_LogOut.js"></script>
+<script type="text/javascript" src="../../Scripts/User/AddUser.js"></script>
+<script type="text/javascript" src="../../Scripts/Project/AddProject.js"></script>
+
+<script type="text/javascript" src="../../Scripts/Project/Project.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+      initPage();
+		
+    });
+  </script>
+
+
+</head>
+
+<body scrolling="yes" >
+
+	<!--NavBar-->
+	<div id="navBar"></div>
+	<!--.NavBar-->
+	<div class="container ">
+		
+		<div class="row">
+			<div class="col-md-1 col-md-offset-1">
+				<h1>Project</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-1 col-md-offset-1"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-11 col-md-offset-1">
+				<div class="well">
+					<ul>
+						<li><span style='color: #47a447;'>GREEN = </span>Safe</li>
+						<li><span style='color: #d2322d;'>RED = </span>Vulnerable</li>
+						<li><span style='color: #428bca;'>BLUE = </span>Downloadable</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+
+			
+			<div class="col-md-11 col-md-offset-1">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<a class="btn btn-primary" href="../../GenWorkspaceSummary">Download
+							LaTex Table Summary</a> <a class="btn btn-primary"
+							href="../../GetWorkspaceReport">Download All Vulnerable Codes
+							& Signatures</a>
+					</div>
+					<div class="panel-body">
+						<div id="divProjectTable" class="table table-bordered"></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+<div id="progress_modal"></div> 
+	<div id="divAddUser"></div>
+	<div id="divAddProject"></div>
+	<div id="divAlert"></div>
+
+
+</body>
+
+</html>

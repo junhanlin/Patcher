@@ -1,0 +1,16 @@
+#mdlAlert
+{
+     z-index: 99999999;
+}
+#divAlertTitle {
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#divAlertContent {
+	padding: 30px;
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+}

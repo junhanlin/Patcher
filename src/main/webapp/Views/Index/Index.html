@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Patcher</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Patcher">
+
+        <meta name="author" content="John Lin">
+        <script src="../../Scripts/jquery/jquery.js"></script>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="../../Styles/bootstrap/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="../../Styles/bootstrap/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../../Styles/bootstrap/ladda-themeless.min.css">
+        <!-- Latest compiled and minified JavaScript -->
+        <!--[if lt IE 9]>
+        <script src="//cdnjs.bootcss.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+        <![endif]-->
+        <script src="../../Scripts/bootstrap/bootstrap.min.js"></script>
+        <script src="../../Scripts/bootstrap/spin.min.js"></script>
+        <script src="../../Scripts/bootstrap/ladda.min.js"></script>
+        <link href="../../Styles/Shared/Alert.css" rel="stylesheet">
+
+        <link href="../../Styles/Index/Index.css" rel="stylesheet">
+
+        <script type="text/javascript" src="../../Scripts/Shared/Utility.js"></script>
+        <script type="text/javascript" src="../../Scripts/Shared/Alert.js"></script>
+        <script type="text/javascript" src="../../Scripts/User/NavBar_Login.js"></script>
+        <script type="text/javascript" src="../../Scripts/User/NavBar_LogOut.js"></script>
+        <script type="text/javascript" src="../../Scripts/User/AddUser.js"></script>
+        <script type="text/javascript" src="../../Scripts/Project/AddProject.js"></script>
+        <script type="text/javascript" src="../../Scripts/Index/Index.js"></script>
+
+        <script type="text/javascript">
+			$(document).ready(function()
+			{
+				initPage();
+
+			});
+        </script>
+
+    </head>
+
+    <body>
+
+        <!--NavBar-->
+        <div id="navBar"></div>
+        <!--.NavBar-->
+
+        <!-- Carousel -->
+        <div id="carSlide" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carSlide" data-slide-to="0" class="active"></li>
+                <li data-target="#carSlide" data-slide-to="1"></li>
+                <li data-target="#carSlide" data-slide-to="2"></li>
+                <li data-target="#carSlide" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Patcher</h1>
+                            <p>
+                                Detecting, patching and viewing string-related vulnerabilities in PHP web application. 
+                            </p>
+                            <p>
+                                <a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Formal String Analysis</h1>
+                            <p>
+                                Adopting the automata-based string analysis tool - Stranger as the backend.
+                            </p>
+                            <p>
+                                <a class="btn btn-lg btn-primary" href="http://soslab.nccu.edu.tw/Projects.html" role="button">Learn More</a>
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Program visualization</h1>
+                            <p>
+                                Visualize the program vulnerabilities in 3D with Unity3D Web Player.
+                            </p>
+                              <p>
+                                <a class="btn btn-lg btn-primary" href="http://unity3d.com/webplayer" role="button">Install Now</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>PHP Code Optimal Patch</h1>
+                            <p>
+                                Runtime vulnerabilities patching with optimal steps.
+                            </p>
+                              <p>
+                                <a class="btn btn-lg btn-primary" href="Misc/PatcherDEMO.pptx" role="button">See DEMO</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#carSlide" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <a class="right carousel-control" href="#carSlide" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div><!-- /.carousel -->
+
+        <!--Footer-->
+        <footer id="footer" style="text-align: center;" >
+            <p>
+                &copy;Patcher 2013
+            </p>
+        </footer>
+        <!--/.Footer-->
+        
+        <div id="divAddUser"></div>
+        <div id="divAddProject"></div>
+        <div id="divAlert"></div>
+    </body>
+</html>

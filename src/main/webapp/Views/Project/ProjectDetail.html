@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <script src="../../Scripts/jquery/jquery.js"></script>
+  <link rel="stylesheet" href="../../Styles/nsProgress/nsProgress.css">
+  <link rel="stylesheet" href="../../Scripts/jstree/dist/themes/default/style.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="../../Styles/bootstrap/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="../../Styles/bootstrap/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="../../Styles/bootstrap/ladda-themeless.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <!--[if lt IE 9]>
+        <script src="//cdnjs.bootcss.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+        <![endif]-->
+  <script src="../../Scripts/bootstrap/bootstrap.min.js"></script>
+  <script src="../../Scripts/bootstrap/spin.min.js"></script>
+  <script src="../../Scripts/bootstrap/ladda.min.js"></script>
+  <link href="../../Styles/treegrid/jquery.treegrid.css" rel="stylesheet">
+  <link href="../../Styles/Shared/Alert.css" rel="stylesheet">
+  <link href="../../Styles/Project/ProjectDetail.css" rel="stylesheet">
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.load('visualization', '1', {
+      packages: ['corechart']
+    });
+  </script>
+  <script type="text/javascript" src="../../Scripts/treegrid/jquery.treegrid.js"></script>
+  <script type="text/javascript" src="../../Scripts/treegrid/jquery.treegrid.bootstrap3.js"></script>
+  <script type="text/javascript" src="../../Scripts/jstree/dist/jstree.min.js"></script>
+<script type="text/javascript" src="../../Scripts/nsProgress/nsProgress.js"></script>
+
+  <script type="text/javascript" src="../../Scripts/Shared/Utility.js"></script>
+  <script type="text/javascript" src="../../Scripts/Shared/Alert.js"></script>
+  <script type="text/javascript" src="../../Scripts/User/NavBar_Login.js"></script>
+  <script type="text/javascript" src="../../Scripts/User/NavBar_LogOut.js"></script>
+  <script type="text/javascript" src="../../Scripts/User/AddUser.js"></script>
+  <script type="text/javascript" src="../../Scripts/Project/AddProject.js"></script>
+  <script type="text/javascript" src="../../Scripts/Project/ViewSinkList.js"></script>
+  <script type="text/javascript" src="../../Scripts/Project/ProjectDetail.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+      google.setOnLoadCallback(function() {
+        initPage();
+
+      });
+
+    });
+  </script>
+
+</head>
+
+<body scrolling="yes">
+  <!--NavBar-->
+  <div id="navBar"></div>
+  <!--.NavBar-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-11 col-md-offset-1">
+        <div class="page-header">
+          <h1 id="titleProject">Project Details</h1>
+        </div>
+        <div class="well" id="wellProjectDesc"></div>
+        <div class="row">
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        &nbsp;
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5 col-md-offset-1">
+        <div id="divProjectDetailTree" sytle="width:100%;"></div>
+        <!-- <div id="divProjectDetailTreeGrid" class="table table-bordered"></div> -->
+      </div>
+      <div class="col-md-5">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Legend</h3>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-12">
+                    <img src="../../Images/folder.png" alt="" width="16" height="16" />Folder Contains Vulnerable Codes
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <img src="../../Images/folder_secured.png" alt="" width="16" height="16" />Folder Without Vulnerable Codes
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <img src="../../Images/php.png" alt="" width="16" height="16" />Vulnerable PHP Code
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <img src="../../Images/php_secured.png" alt="" width="16" height="16" />Invulnerable PHP Code
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <img src="../../Images/red.png" alt="" width="16" height="16" />Vulnerable Sink
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <img src="../../Images/green.png" alt="" width="16" height="16" />Invulnerable Sink
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div id="divProjectDetailPanelContainer" class="col-md-12">
+            <div id="divProjectDetailFileDetail" class="table table-bordered">
+              <div id="divProjectSummary" class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Project Summary</h3>
+                </div>
+                <div class="panel-body">
+
+                  <div id="pieTaintSummary" style="width:100%; height:500px;"></div>
+
+                  <div id="pieSinkSummary" style="width:100%; height:500px;"></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+<div id="progress_modal"></div> 
+  <div id="divAddUser"></div>
+  <div id="divAddProject"></div>
+  <div id="divAlert"></div>
+  <div id="divViewSinkList"></div>
+  <div id="divSinkPanel"></div>
+
+</body>
+
+</html>

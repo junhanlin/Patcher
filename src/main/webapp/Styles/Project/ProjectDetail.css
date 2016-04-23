@@ -1,0 +1,45 @@
+body
+{
+    padding-top: 50px;
+}
+
+
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+.safeFile
+{
+  color:#006600;
+  font-size:10pt;
+}
+.failFile
+{
+  color:#FFCC66;
+  font-size:10pt;
+}
+.vulnFile
+{
+  color:#FF3333;
+  font-size:10pt;
+}
+.unfinishFile
+{
+  color:#0033FF;
+  font-size:10pt;
+}
+
+@media ( max-width : 980px) {
+    /* Enable use of floated navbar text */
+    .navbar-text.pull-right {
+        float: none;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.jstree-themeicon-custom{
+	background-size:contain !important;
+}

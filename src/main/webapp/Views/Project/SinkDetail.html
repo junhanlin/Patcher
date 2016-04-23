@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <script src="../../Scripts/jquery/jquery.js"></script>
+        <link rel="stylesheet" href="../../Styles/nsProgress/nsProgress.css">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="../../Styles/bootstrap/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="../../Styles/bootstrap/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="../../Styles/bootstrap/ladda-themeless.min.css">
+        
+        <link rel="stylesheet" href="../../Styles/prettify/prettify.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <!--[if lt IE 9]>
+        <script src="//cdnjs.bootcss.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+        <![endif]-->
+        <script src="../../Scripts/bootstrap/bootstrap.min.js"></script>
+        <script src="../../Scripts/bootstrap/spin.min.js"></script>
+        <script src="../../Scripts/bootstrap/ladda.min.js"></script>
+<script type="text/javascript" src="../../Scripts/nsProgress/nsProgress.js"></script>
+        <script src="../../Scripts/prettify/prettify.js"></script>
+         <script type="text/javascript" src="http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject.js"></script>
+        <link href="../../Styles/Shared/Alert.css" rel="stylesheet">
+        <link href="../../Styles/Project/SinkDetail.css" rel="stylesheet">
+
+        <script type="text/javascript" src="../../Scripts/Shared/Utility.js"></script>
+        <script type="text/javascript" src="../../Scripts/Shared/Alert.js"></script>
+        <script type="text/javascript" src="../../Scripts/User/NavBar_Login.js"></script>
+        <script type="text/javascript" src="../../Scripts/User/NavBar_LogOut.js"></script>
+        <script type="text/javascript" src="../../Scripts/User/AddUser.js"></script>
+        <script type="text/javascript" src="../../Scripts/Project/AddProject.js"></script>
+        <script type="text/javascript" src="../../Scripts/Project/SinkDetail.js"></script>
+
+        <script type="text/javascript">
+			$(document).ready(function()
+			{
+				initPage();
+
+			});
+        </script>
+
+    </head>
+
+    <body scrolling="yes">
+        <!--NavBar-->
+        <div id="navBar"></div>
+        <!--.NavBar-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-11 col-md-offset-1">
+                    <div class="page-header">
+                        <h1>Tainted Sink Detail <small>Sink</small></h1>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!--DepGraph Area-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">3D Dependency Graph</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div id="divVisualPatcher">
+                                        <div id="visualPatcherApp">
+                                            <div class="missing">
+                                                <a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!"> <img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png"
+                                                width="193" height="63" /> </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="well">
+                                        <ul>
+                                            <li>
+                                                Left Mouse Click: Focus on node
+                                            </li>
+                                            <li>
+                                                Right Mouse Click + Drag: Camera rotaion
+                                            </li>
+                                            <li>
+                                                Arrow Up/Down: Travel with preordered sequence
+                                            </li>
+                                            <li>
+                                                Arrow Left/Right: Travel amoung sibling nodes if any
+                                            </li>
+                                            <li>
+                                                W / S Keys: Dolly in and out
+                                            </li>
+                                            <li>
+                                                A / D Keys: Truck in and out
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <a id="aDepGraphDot" class="btn btn-primary" href="../../GetDepGraphDot">Download Dependency Graph (DOT)</a>
+                                </div>
+                            </div>
+                            <!--DepGraph Area-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!--Min-Cut Patch Area-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Min-Cut Patch</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div id="divMinCutPatch"></div>
+                                </div>
+                            </div>
+                            <!--.Min-Cut Patch Area-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!--Optimal Patch Area-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Optimal Patch</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div id="divOptPatch"></div>
+                                </div>
+                            </div>
+                            <!--.Optmal Patch Area-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!--Black Auto Area-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Vulnerability Signature</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <textarea id="txtBlackAuto" class="form-control" rows="10"></textarea>                                                                        
+
+
+
+                                </div>
+                            </div>
+                            <!--.Black Auto Area-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!--White Auto Area-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Safe Signature</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <textarea id="txtWhiteAuto" class="form-control" rows="10"></textarea>                                                                        
+
+
+
+                                </div>
+                            </div>
+                            <!--.White Auto Area-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5" style="height:600px;">
+                    <pre class="prettyprint linenums" style="height:100%;overflow-x:auto;overflow-y:auto;" id="codeSrcCode">
+<code class = "language-php"></code>
+                    </pre>
+                </div>
+            </div>
+
+        </div>
+       <div id="progress_modal"></div> 
+        <div id="divAddUser"></div>
+        <div id="divAddProject"></div>
+        <div id="divAlert"></div>
+
+    </body>
+</html>
