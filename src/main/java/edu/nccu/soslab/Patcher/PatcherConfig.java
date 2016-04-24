@@ -26,6 +26,7 @@ public class PatcherConfig
 	public String optPatchJarVirPath;
 	
 	
+	
 	public String getProjectDirPath()
 	{
 		return new File(patcherHomePath,"projects").getAbsolutePath();
