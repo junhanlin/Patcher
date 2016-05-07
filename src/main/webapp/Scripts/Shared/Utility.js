@@ -152,7 +152,7 @@ function detectBrowser()
 function fillHTMLSrc(virPath, container, callback)
 {
 	$.ajax({
-		url : getUrl(virPath),
+		url : "../../"+virPath,
 		type : "GET",
 		contentType : "application/text",
 		datatype : "html",

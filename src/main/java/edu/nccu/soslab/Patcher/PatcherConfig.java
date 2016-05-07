@@ -60,7 +60,7 @@ public class PatcherConfig
 			PatcherConfig.config = gson.fromJson(patcherConfigStr, PatcherConfig.class);
 			
 		  
-		    System.out.println("Configuring Patcher Finish");
+			System.out.println("Configuring Patcher Finish");
 			isConfigLoaded=true;
 		    
 		   
