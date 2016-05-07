@@ -1,4 +1,4 @@
-//var WEB_VIR_DIR = "Patcher";
+var WEB_VIR_DIR = "patcher";
 
 var clientBrowser = new detectBrowser();
 String.prototype.endsWith = function(suffix)
@@ -8,8 +8,8 @@ String.prototype.endsWith = function(suffix)
 function getUrl(virPath)
 {
 	if (location != null)
-//		return location.protocol + "//" + location.host + "/" + WEB_VIR_DIR + "/" + virPath;
-		return location.protocol + "//" + location.host   + "/" + virPath;
+		return location.protocol + "//" + location.host + "/" + WEB_VIR_DIR + "/" + virPath;
+//		return location.protocol + "//" + location.host   + "/" + virPath;
 }
 
 function getParameter(parameterName, _window)
@@ -152,7 +152,7 @@ function detectBrowser()
 function fillHTMLSrc(virPath, container, callback)
 {
 	$.ajax({
-		url : "../../"+virPath,
+		url : getUrl(virPath),
 		type : "GET",
 		contentType : "application/text",
 		datatype : "html",
