@@ -52,7 +52,7 @@
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<configuration>
-					<port>9090</port>
+					<port>10404</port>
 					<!-- application path always starts with / -->
 					<path>/</path>
 					<!-- optional path to a context file -->
